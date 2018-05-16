@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //首页导航菜单
+    <string-array name="main_menus">
+
+        <item>基础库Demo</item>
+
+        <item>图片库Demo</item>
+
+        <item>数据库Demo</item>
+
+        <item>高德库Demo</item>
+
+        <item>网络库Demo</item>
+
+        <item>分享库Demo</item>
+
+        <item>ETC库Demo</item>
+
+    </string-array>
+</resources>
