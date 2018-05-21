@@ -1,11 +1,14 @@
 package com.uroad.uroadlib_v2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.uroad.uroadlib_v2.push.XGPushActivity;
 
 public class MainActivity extends AppCompatActivity {
     private ListView lvMenu;
@@ -44,20 +47,44 @@ public class MainActivity extends AppCompatActivity {
             case 0://基础库Demo
 
                 break;
-            case 1://图片库Demo
+            case 1://地图库Demo
 
                 break;
-            case 2://数据库Demo
+            case 2://定位库Demo
 
                 break;
-            case 3://高德库Demo
+            case 3://导航库Demo
 
                 break;
-            case 4://分享库Demo
+            case 4://搜索库Demo
 
                 break;
-            case 5://ETC库Demo
+            case 5://语音库Demo
 
+                break;
+            case 6://微信库Demo
+
+                break;
+            case 7://QQ库Demo
+
+                break;
+            case 8://支付宝库Demo
+
+                break;
+            case 9://ETC蓝牙库Demo
+
+                break;
+            case 10://ETCNFC库Demo
+
+                break;
+            case 11://下拉刷新库Demo
+
+                break;
+            case 12://图片选择库Demo
+
+                break;
+            case 13://信鸽推送Demo
+                startActivity(new Intent(this, XGPushActivity.class));
                 break;
 
         }

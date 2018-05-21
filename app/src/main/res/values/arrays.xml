@@ -5,17 +5,24 @@
 
         <item>基础库Demo</item>
 
-        <item>图片库Demo</item>
+        <item>地图库Demo</item>
+        <item>定位库Demo</item>
+        <item>导航库Demo</item>
+        <item>搜索库Demo</item>
+        <item>语音库Demo</item>
 
-        <item>数据库Demo</item>
+        <item>微信库Demo</item>
+        <item>QQ库Demo</item>
+        <item>支付宝库Demo</item>
 
-        <item>高德库Demo</item>
+        <item>ETC蓝牙库Demo</item>
+        <item>ETCNFC库Demo</item>
 
-        <item>网络库Demo</item>
+        <item>下拉刷新库Demo</item>
+        <item>图片选择库Demo</item>
 
-        <item>分享库Demo</item>
+        <item>信鸽推送Demo</item>
 
-        <item>ETC库Demo</item>
 
     </string-array>
 </resources>
