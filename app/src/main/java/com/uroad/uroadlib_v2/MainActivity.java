@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.uroad.uroadlib_v2.kotlintest.RecycleviewActivity;
 import com.uroad.uroadlib_v2.push.XGPushActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -85,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 13://信鸽推送Demo
                 startActivity(new Intent(this, XGPushActivity.class));
+                break;
+            case 14:
+                startActivity(new Intent(this, RecycleviewActivity.class));
                 break;
 
         }

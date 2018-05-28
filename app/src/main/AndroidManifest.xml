@@ -42,6 +42,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".kotlintest.RecycleviewActivity"/>
         <!--信鸽推送-->
         <activity android:name=".push.XGPushActivity"
             android:launchMode="singleTop"></activity>
