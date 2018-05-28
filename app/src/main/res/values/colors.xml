@@ -4,4 +4,24 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="bg_gray">#DFDFDF</color>
+
+    <color name="darkgray">#434750</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blue">#FF106AD9</color>
+    <color name="red">#FFFB391B</color>
+    <color name="darkred">#b71919</color>
+    <color name="yellow">#FDBE00</color>
+    <color name="orange">#FFFD5900</color>
+    <color name="deepblue">#FF0567B9</color>
+    <color name="lightblue">#FF139BF4</color>
+    <color name="darkblue">#3F51B5</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray">#A0A0A0</color>
+    <color name="lightgray">#999999</color>
+    <color name="basegray">#989797</color>
+    <color name="gold">#b89766</color>
+    <color name="green">#00C525</color>
+    <color name="brown">#FC961D</color>
+    <color name="purple">#691f6c</color>
 </resources>
