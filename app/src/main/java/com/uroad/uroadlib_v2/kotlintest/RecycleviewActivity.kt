@@ -1,10 +1,10 @@
 package com.uroad.uroadlib_v2.kotlintest
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import com.uroad.uroadlib_v2.R
+import com.uroad.uroadlib_v2.R.id.recycler_view
 import com.uroad.uroadlib_v2.kotlintest.adapter.RecycleAdapter
 import kotlinx.android.synthetic.main.activity_recycleview.*
 

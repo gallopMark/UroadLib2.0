@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_friend"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:gravity="center|left"
+            android:text="QQ好友"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_Qzone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="QQ空间"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_shareText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享图文" />
+
+    <Button
+        android:id="@+id/bt_shareImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享纯图片" />
+
+    <Button
+        android:id="@+id/bt_shareMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享音乐" />
+
+    <Button
+        android:id="@+id/bt_shareApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享应用" />
+
+    <Button
+        android:id="@+id/bt_shareQzone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享QQ空间" />
+
+    <Button
+        android:id="@+id/bt_auth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="授权登录" />
+</LinearLayout>
