@@ -64,10 +64,10 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case 6://微信库Demo
-
+                startActivity(new Intent(this, WechatDemoActivity.class));
                 break;
             case 7://QQ库Demo
-
+                startActivity(new Intent(this, TecentQQDemoActivity.class));
                 break;
             case 8://支付宝库Demo
 
@@ -90,7 +90,9 @@ public class MainActivity extends AppCompatActivity {
             case 14:
                 startActivity(new Intent(this, RecycleviewActivity.class));
                 break;
-
+            case 15:  //网络库Demo
+               // startActivity(new Intent(this, HttpDemoActivity.class));
+                break;
         }
     }
 }

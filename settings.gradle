@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':URoadWechatLib', ':URoadQQLib', ':URoadAliLib', ':HttpLib'

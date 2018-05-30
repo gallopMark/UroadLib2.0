@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">URoadAliLib</string>
+    <string name="app_key">32152</string>
+
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">权限验证失败</string>
+    <string name="errcode_unknown">未知错误</string>
+    <string name="errcode_send_fail">发送失败</string>
+</resources>

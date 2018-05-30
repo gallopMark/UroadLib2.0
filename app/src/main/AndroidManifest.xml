@@ -14,17 +14,20 @@
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
     <!-- 【可选】 信鸽SDK所需权限 -->
     <uses-permission android:name="android.permission.RESTART_PACKAGES" />
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.READ_LOGS"
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BATTERY_STATS"
+    <uses-permission
+        android:name="android.permission.BATTERY_STATS"
         tools:ignore="ProtectedPermissions" />
 
     <application
@@ -42,13 +45,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".kotlintest.RecycleviewActivity"/>
-        <!--信鸽推送-->
-        <activity android:name=".push.XGPushActivity"
-            android:launchMode="singleTop"></activity>
+        <activity android:name=".kotlintest.RecycleviewActivity" />
+        <activity android:name=".WechatDemoActivity" />
+        <activity android:name=".TecentQQDemoActivity" />
+        <!-- <activity
+             android:name=".wxapi.WXEntryActivity"
+             android:exported="true"
+             android:launchMode="singleTop"
+             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+         <activity
+             android:name=".wxapi.WXPayEntryActivity"
+             android:exported="true"
+             android:launchMode="singleTop"
+             android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
 
-        <receiver android:name="com.uroad.uroadlib_v2.push.receiver.MessageReceiver"
-            android:exported="true" >
+        <!--信鸽推送-->
+        <activity
+            android:name=".push.XGPushActivity"
+            android:launchMode="singleTop" />
+
+        <receiver
+            android:name="com.uroad.uroadlib_v2.push.receiver.MessageReceiver"
+            android:exported="true">
             <intent-filter>
                 <!-- 接收消息透传 -->
                 <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
