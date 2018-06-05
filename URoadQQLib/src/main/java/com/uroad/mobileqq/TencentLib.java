@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Toast;
@@ -13,6 +15,7 @@ import com.tencent.connect.share.QzoneShare;
 import com.tencent.tauth.Tencent;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /*qq分享工具类*/
 public class TencentLib {
@@ -33,10 +36,6 @@ public class TencentLib {
         return mTencent;
     }
 
-    public boolean isQQInstalled() {
-        return mTencent.isQQInstalled(context);
-    }
-
     /*授权登录*/
     public void doLogin(String scope, BaseUiListener listener) {
         mTencent.login(context, scope, listener);
@@ -46,18 +45,41 @@ public class TencentLib {
      * QQ纯文字分享(QQsdk不支持纯文字分享功能，这里做特殊处理)
      **/
     public void shareTextToQQ(String text) {
-        if (mTencent.isQQInstalled(context)) {
-            Intent intent = new Intent();
-            ComponentName componentName = new ComponentName("com.tencent.mobileqq",
-                    "com.tencent.mobileqq.activity.JumpActivity");
-            intent.setComponent(componentName);
-            intent.setAction(Intent.ACTION_SEND);
-            intent.setType("text/plain"); // 纯文本
-            intent.putExtra(Intent.EXTRA_TEXT, text);
-            context.startActivity(intent);
+        //"com.tencent.mobileqq", "com.tencent.mobileqqi", "com.tencent.qqlite", "com.tencent.minihd.qq", "com.tencent.tim"
+        String pkg = QQClientPackageName();
+        if (!TextUtils.isEmpty(pkg)) {
+            try {
+                Intent intent = new Intent();
+                ComponentName componentName = new ComponentName(pkg, pkg + ".activity.JumpActivity");
+                intent.setComponent(componentName);
+                intent.setAction(Intent.ACTION_SEND);
+                intent.setType("text/plain"); // 纯文本
+                intent.putExtra(Intent.EXTRA_TEXT, text);
+                context.startActivity(intent);
+            } catch (Exception e) {
+                Toast.makeText(context, "未安装QQ，或QQ版本过低！", Toast.LENGTH_SHORT).show();
+            }
         } else {
-            Toast.makeText(context, "请安装QQ客户端", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "未安装QQ，或QQ版本过低！", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private String QQClientPackageName() {
+        PackageManager packageManager = context.getPackageManager();
+        List list = packageManager.getInstalledPackages(0);
+        if (list != null) {
+            for (int i = 0; i < list.size(); i++) {
+                String packageName = ((PackageInfo) list.get(i)).packageName;
+                if (packageName.equals("com.tencent.mobileqq")
+                        || packageName.equals("com.tencent.mobileqqi")
+                        || packageName.equals("com.tencent.qqlite")
+                        || packageName.equals("com.tencent.minihd.qq")
+                        || packageName.equals("com.tencent.tim")) {
+                    return packageName;
+                }
+            }
+        }
+        return null;
     }
 
     /*分享图文消息*/

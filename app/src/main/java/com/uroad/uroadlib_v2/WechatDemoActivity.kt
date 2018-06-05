@@ -4,6 +4,7 @@ import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import com.uroad.uroadlib_v2.baselib.common.BaseActivity
 import com.uroad.wechat.WeChatAuth
 import com.uroad.wechat.WeChatPayLib
 import com.uroad.wechat.WeChatShareLib
@@ -12,12 +13,13 @@ import kotlinx.android.synthetic.main.activity_wechat_demo.*
 /**
  *Created by MFB on 2018/5/28.
  */
-class WechatDemoActivity : AppCompatActivity(), View.OnClickListener {
+class WechatDemoActivity : BaseActivity(), View.OnClickListener {
 
     private var mTargetScene = WeChatShareLib.WXSceneSession
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_wechat_demo)
+
+    override fun setUp(savedInstanceState: Bundle?) {
+        setBaseContentLayout(R.layout.activity_wechat_demo)
+        setToolTitle("UroadWeChatLib")
         bt_shareText.setOnClickListener(this)
         bt_shareImage.setOnClickListener(this)
         bt_shareMusic.setOnClickListener(this)

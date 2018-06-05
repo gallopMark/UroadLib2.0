@@ -47,7 +47,7 @@ dependencies {
     implementation project(":URoadWechatLib")
     implementation project(":URoadQQLib")
     implementation project(":URoadAliLib")
-    implementation project(":HttpLib")
+    implementation project(':HttpLib')
 }
 repositories {
     mavenCentral()

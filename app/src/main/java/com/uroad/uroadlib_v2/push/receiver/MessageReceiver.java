@@ -47,7 +47,7 @@ public class MessageReceiver extends XGPushBaseReceiver {
         notific.setActivity(notifiShowedRlt.getActivity());
         notific.setUpdate_time(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
                 .format(Calendar.getInstance().getTime()));
-//        NotificationService.getInstance(context).save(notific);
+//        NotificationService.get(context).save(notific);
         context.sendBroadcast(intent);
         show(context, "您有1条新消息, " + "通知被展示 ， " + notifiShowedRlt.toString());
         Log.d("LC", "+++++++++++++++++++++++++++++展示通知的回调");

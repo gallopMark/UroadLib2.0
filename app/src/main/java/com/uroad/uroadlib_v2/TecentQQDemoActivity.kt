@@ -29,6 +29,7 @@ import android.database.Cursor
 import android.graphics.BitmapFactory
 import android.graphics.Bitmap
 import android.graphics.Rect
+import com.uroad.uroadlib_v2.baselib.common.BaseActivity
 import java.io.FileDescriptor
 import java.io.FileInputStream
 
@@ -36,11 +37,12 @@ import java.io.FileInputStream
 /**
  *Created by MFB on 2018/5/29.
  */
-class TecentQQDemoActivity : AppCompatActivity(), View.OnClickListener {
-    private var isShareToQQ = false;
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tentcentqq_demo)
+class TecentQQDemoActivity : BaseActivity(), View.OnClickListener {
+    private var isShareToQQ = false
+
+    override fun setUp(savedInstanceState: Bundle?) {
+        setBaseContentLayout(R.layout.activity_tentcentqq_demo)
+        setToolTitle("UroadQQLib")
         radioGroup.setOnCheckedChangeListener { _, checkId ->
             isShareToQQ = checkId == R.id.rb_friend
         }
