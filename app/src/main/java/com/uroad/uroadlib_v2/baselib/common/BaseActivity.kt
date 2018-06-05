@@ -132,7 +132,6 @@ abstract class BaseActivity : AppCompatActivity() {
         startActivityForResult(intent, requestCode)
     }
 
-
     override fun onDestroy() {
         super.onDestroy()
         rxDisposables.dispose()
