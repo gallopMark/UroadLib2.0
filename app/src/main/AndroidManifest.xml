@@ -48,6 +48,7 @@
         <activity android:name=".kotlintest.RecycleviewActivity" />
         <activity android:name=".WechatDemoActivity" />
         <activity android:name=".TecentQQDemoActivity" />
+        <activity android:name=".RxHttpDemoActivity"/>
         <!-- <activity
              android:name=".wxapi.WXEntryActivity"
              android:exported="true"
